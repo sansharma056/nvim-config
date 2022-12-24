@@ -3,9 +3,9 @@ vim.keymap.set("v", "<leader>y", '"+y')
 
 vim.keymap.set("n", "<C-b>", vim.cmd.Ex)
 
-vim.keymap.set("", "<leader>p", ":bprev<CR>")
-vim.keymap.set("", "<leader>n", ":bnext<CR>")
-vim.keymap.set("", "<leader>w", ":bdelete<CR>")
+vim.keymap.set("", "<C-p>", "<cmd>bprev<CR>")
+vim.keymap.set("", "<C-n>", "<cmd>bnext<CR>")
+vim.keymap.set("", "<C-w>", "<cmd>bdelete<CR>")
 
 vim.keymap.set("", "<c-d>", "<c-d>zz")
 vim.keymap.set("", "<c-u>", "<c-u>zz")
