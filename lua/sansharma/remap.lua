@@ -1,11 +1,13 @@
-vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+vim.keymap.set("n", "<leader>y", [["+y]])
+vim.keymap.set("v", "<leader>y", [["+y]])
+
+vim.keymap.set("n", "<Tab>", "<C-^>")
 
 vim.keymap.set("n", "<C-b>", vim.cmd.Ex)
 
-vim.keymap.set("", "<C-p>", "<cmd>bprev<CR>")
-vim.keymap.set("", "<C-n>", "<cmd>bnext<CR>")
-vim.keymap.set("", "<C-w>", "<cmd>bdelete<CR>")
+vim.keymap.set("", "<A-w>", "<cmd>bdelete<CR>")
 
 vim.keymap.set("", "<c-d>", "<c-d>zz")
 vim.keymap.set("", "<c-u>", "<c-u>zz")
