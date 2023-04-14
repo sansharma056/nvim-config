@@ -1,13 +1,21 @@
 local lsp = require("lsp-zero")
 local util = require("lspconfig.util")
+local mason_null_ls = require("mason-null-ls")
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   "tsserver",
-  "eslint",
-  "sumneko_lua",
+  "eslint"
 })
+
+
+mason_null_ls.setup({
+  ensure_installed = { "prettier" },
+  automatic_setup = true
+})
+
+mason_null_ls.setup_handlers()
 
 lsp.configure("sumneko_lua", {
   settings = {
@@ -61,7 +69,6 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
   vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
   vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "<leader>ff", ":LspZeroFormat<CR>")
 end)
 
 lsp.setup()

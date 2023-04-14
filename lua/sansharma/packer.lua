@@ -42,6 +42,9 @@ return require("packer").startup(function(use)
   use("tpope/vim-fugitive")
   use("lewis6991/gitsigns.nvim")
 
+  -- FOLDS
+  use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
   -- LSP
   use({
     "VonHeikemen/lsp-zero.nvim",
@@ -62,6 +65,10 @@ return require("packer").startup(function(use)
       -- Snippets
       { "L3MON4D3/LuaSnip" },
       { "rafamadriz/friendly-snippets" },
+
+      -- Formatting
+      { "jose-elias-alvarez/null-ls.nvim" },
+      { "jay-babu/mason-null-ls.nvim" }
     },
   })
 
