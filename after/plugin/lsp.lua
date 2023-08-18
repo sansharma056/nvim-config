@@ -15,9 +15,7 @@ mason_null_ls.setup({
   automatic_setup = true
 })
 
-mason_null_ls.setup_handlers()
-
-lsp.configure("sumneko_lua", {
+lsp.configure("lua_ls", {
   settings = {
     Lua = {
       diagnostics = {
